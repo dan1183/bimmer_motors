@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ReviewsScreen extends StatefulWidget {
@@ -28,6 +31,13 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (Platform.isAndroid) {
+      // код для Android
+    } else if (Platform.isIOS) {
+      // код для iOS
+    } else if (kIsWeb) {
+      // код для веб-приложения
+    }
     return Scaffold(
       appBar: AppBar(
         title: const Text('Отзывы'),
